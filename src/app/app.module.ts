@@ -4,9 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { LocationComponent } from './components/location/location.component';
+import { LocationComponent } from './components/header/location/location.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SearchComponent } from './components/search/search.component';
+import { SearchComponent } from './components/header/search/search.component';
+import { LanguageComponent } from './components/header/language/language.component';
+import { ProfileComponent } from './components/header/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { SearchComponent } from './components/search/search.component';
     HeaderComponent,
     FooterComponent,
     LocationComponent,
-    SearchComponent
+    SearchComponent,
+    LanguageComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
