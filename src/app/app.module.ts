@@ -9,7 +9,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SearchComponent } from './components/header/search/search.component';
 import { LanguageComponent } from './components/header/language/language.component';
 import { ProfileComponent } from './components/header/profile/profile.component';
-import { SellComponent } from './components/sell/sell.component';
+import { SellComponent } from './components/header/sell/sell.component';
+import { BodyComponent } from './components/body/body.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SellComponent } from './components/sell/sell.component';
     SearchComponent,
     LanguageComponent,
     ProfileComponent,
-    SellComponent
+    SellComponent,
+    BodyComponent
   ],
   imports: [
     BrowserModule,
