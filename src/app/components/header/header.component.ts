@@ -17,6 +17,5 @@ export class HeaderComponent {
 
   toggleAddTask() {
     this.uiService.toggleAddTask();
-    console.log(this.showDropDown, "header");
   }
 }

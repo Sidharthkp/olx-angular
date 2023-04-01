@@ -17,6 +17,5 @@ export class LocationComponent {
 
   onClick() {
     this.btnClick.emit()
-    console.log(this.rotate);
   }
 }
