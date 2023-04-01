@@ -8,12 +8,15 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  showAddTask!: boolean;
+  showDropDown!: boolean;
   subscription!: Subscription;
 
-  constructor(private uiService: UiService) {}
+  constructor(private uiService: UiService) {
+    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showDropDown = value));
+  }
 
   toggleAddTask() {
     this.uiService.toggleAddTask();
+    console.log(this.showDropDown, "header");
   }
 }
