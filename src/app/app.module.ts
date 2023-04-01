@@ -16,6 +16,7 @@ import { DropdownComponent } from './components/body/categories/dropdown/dropdow
 import { CategoryComponent } from './components/body/categories/category/category.component';
 import { BannerComponent } from './components/body/banner/banner.component';
 import { ItemsComponent } from './components/body/items/items.component';
+import { LocationdropdownComponent } from './components/header/location/locationdropdown/locationdropdown.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ItemsComponent } from './components/body/items/items.component';
     DropdownComponent,
     CategoryComponent,
     BannerComponent,
-    ItemsComponent
+    ItemsComponent,
+    LocationdropdownComponent
   ],
   imports: [
     BrowserModule,
