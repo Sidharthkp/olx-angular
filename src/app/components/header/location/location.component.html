@@ -1,9 +1,9 @@
-<div class="border-[#002f34] border-2 rounded-md w-72 h-12 bg-white">
+<div class="border-[#002f34] border-2 rounded-md w-72 h-12 bg-white" [ngClass]="{'border-cyan-400': rotate}">
     <div class="relative w-full h-full flex items-center">
         <fa-icon class="cursor-pointer absolute left-2 text-gray-500" [icon]="faMagnifyingGlass"></fa-icon>
         <fa-icon class="cursor-pointer absolute right-4 text-2xl" [ngClass]="{'rotate-180': rotate}" (click)="onClick()"
             [icon]="faAngleDown"></fa-icon>
         <input type="text" class="w-3/6 rounded-md h-full text-center outline-none" value="India" />
     </div>
-    <app-locationdropdown></app-locationdropdown>
+    <app-locationdropdown [show]="rotate"></app-locationdropdown>
 </div>

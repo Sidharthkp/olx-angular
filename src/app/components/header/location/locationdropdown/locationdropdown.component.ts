@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-import { UiService } from 'src/app/services/ui.service';
-import { Subscription } from 'rxjs';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-locationdropdown',
@@ -8,11 +6,5 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./locationdropdown.component.css']
 })
 export class LocationdropdownComponent {
-  showDropDown!: boolean;
-  subscription!: Subscription;
-
-  constructor(private uiService: UiService) {
-    this.subscription = this.uiService.onToggle().subscribe((value) => (this.showDropDown = value));
-  }
-
+  @Input() show!: boolean;
 }
