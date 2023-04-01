@@ -11,6 +11,11 @@ import { LanguageComponent } from './components/header/language/language.compone
 import { ProfileComponent } from './components/header/profile/profile.component';
 import { SellComponent } from './components/header/sell/sell.component';
 import { BodyComponent } from './components/body/body.component';
+import { CategoriesComponent } from './components/body/categories/categories.component';
+import { DropdownComponent } from './components/body/categories/dropdown/dropdown.component';
+import { CategoryComponent } from './components/body/categories/category/category.component';
+import { BannerComponent } from './components/body/banner/banner.component';
+import { ItemsComponent } from './components/body/items/items.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +27,12 @@ import { BodyComponent } from './components/body/body.component';
     LanguageComponent,
     ProfileComponent,
     SellComponent,
-    BodyComponent
+    BodyComponent,
+    CategoriesComponent,
+    DropdownComponent,
+    CategoryComponent,
+    BannerComponent,
+    ItemsComponent
   ],
   imports: [
     BrowserModule,
