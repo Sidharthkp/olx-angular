@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dropdown',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./dropdown.component.css']
 })
 export class DropdownComponent {
-
+  faAngleDown = faAngleDown; 
 }
