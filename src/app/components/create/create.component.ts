@@ -28,7 +28,8 @@ import { FormGroup, FormControl } from '@angular/forms';
         this.selectedImage = event.target.files[0];
       }
       else {
-        this.imgSrc
+        this.imgSrc = "/assets/images/noimage.jpg";
+        this.selectedImage = null;
       }
     }
   }
