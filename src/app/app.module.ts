@@ -28,7 +28,7 @@ import { CreateComponent } from './components/create/create.component';
 
 const appRoutes: Routes = [
   { path: '', component: BodyComponent },
-  { path: 'sell', component: CreateComponent }
+  { path: 'post', component: CreateComponent }
 ]
 
 @NgModule({
