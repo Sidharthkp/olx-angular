@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
-    RouterModule.forRoot(appRoutes, { enableTracing: true })
+    RouterModule.forRoot(appRoutes, { enableTracing: true }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

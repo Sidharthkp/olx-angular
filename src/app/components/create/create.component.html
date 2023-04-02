@@ -3,14 +3,22 @@
 </div>
 <div class="min-h-screen w-full pt-20 flex flex-col items-center text-[#002f34] ">
     <h1 class="text-2xl font-bold mb-5">Post Your Ad</h1>
-    <form class="border container h-screen mb-10 rounded-md w-4/6 p-14">
-        <h1 class="text-xl font-bold my-5">Product Name</h1>
-        <input type="text" placeholder="Enter the name of the product" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
-        <h1 class="text-xl font-bold my-5">Product Price</h1>
-        <input type="text" placeholder="Enter the the product price" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
-        <h1 class="text-xl font-bold my-5">Product Details</h1>
-        <input type="text" placeholder="Enter the the product details" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
-        <h1 class="text-xl font-bold my-5">Location</h1>
-        <input type="text" placeholder="Enter the location" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+    <form [formGroup]="formTemplate" class="border container h-screen mb-10 rounded-md w-4/6 p-14 flex justify-between">
+        <div>
+            <h1 class="text-xl font-bold my-5">Product Name</h1>
+            <input type="text" formControlName="name" placeholder="Enter the name of the product" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+            <h1 class="text-xl font-bold my-5">Product Price</h1>
+            <input type="text" formControlName="price" placeholder="Enter the the product price" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+            <h1 class="text-xl font-bold my-5">Product Details</h1>
+            <input type="text" formControlName="details" placeholder="Enter the the product details" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+            <h1 class="text-xl font-bold my-5">Location</h1>
+            <input type="text" formControlName="location" placeholder="Enter the location" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+        </div>
+        <div class="flex flex-col">
+            <h1 class="text-xl font-bold my-5">Please Choose An Image</h1>
+            <img [src]="imgSrc" width="250px" height="150px">
+            <input formControlName="imageUrl" type="file" class="mb-5" (change)="showPreview($event)">
+            <button type="submit" class="bg-[#002f34] w-24 h-10 rounded-md text-white font-bold ml">Post now</button>
+        </div>
     </form>
 </div>
