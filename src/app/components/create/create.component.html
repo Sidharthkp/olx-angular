@@ -1,3 +1,16 @@
-<div class="min-h-screen w-full pt-16">
-
+<div class="w-full h-16 bg-gray-100 shadow-md p-5 fixed">
+    <fa-icon class="cursor-pointer text-xl ml-5" [icon]="faArrowLeft" routerLink="/"></fa-icon>
+</div>
+<div class="min-h-screen w-full pt-20 flex flex-col items-center text-[#002f34] ">
+    <h1 class="text-2xl font-bold mb-5">Post Your Ad</h1>
+    <form class="border container h-screen mb-10 rounded-md w-4/6 p-14">
+        <h1 class="text-xl font-bold my-5">Product Name</h1>
+        <input type="text" placeholder="Enter the name of the product" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+        <h1 class="text-xl font-bold my-5">Product Price</h1>
+        <input type="text" placeholder="Enter the the product price" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+        <h1 class="text-xl font-bold my-5">Product Details</h1>
+        <input type="text" placeholder="Enter the the product details" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+        <h1 class="text-xl font-bold my-5">Location</h1>
+        <input type="text" placeholder="Enter the location" class="border-[#002f34] border-2 rounded-md w-72 h-12 p-5">
+    </form>
 </div>
