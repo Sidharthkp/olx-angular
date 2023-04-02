@@ -17,6 +17,12 @@ import { CategoryComponent } from './components/body/categories/category/categor
 import { BannerComponent } from './components/body/banner/banner.component';
 import { ItemsComponent } from './components/body/items/items.component';
 import { LocationdropdownComponent } from './components/header/location/locationdropdown/locationdropdown.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideAuth,getAuth } from '@angular/fire/auth';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
@@ -38,7 +44,12 @@ import { LocationdropdownComponent } from './components/header/location/location
   ],
   imports: [
     BrowserModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
+    provideDatabase(() => getDatabase()),
+    provideFirestore(() => getFirestore()),
+    provideStorage(() => getStorage())
   ],
   providers: [],
   bootstrap: [AppComponent]
