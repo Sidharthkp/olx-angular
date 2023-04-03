@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create',
@@ -11,13 +11,14 @@ import { FormGroup, FormControl } from '@angular/forms';
     faArrowLeft = faArrowLeft;
     imgSrc: string = "/assets/images/noimage.jpg";
     selectedImage: any = null;
+    isSubmitted: boolean = false;
 
     formTemplate = new FormGroup({
-      name: new FormControl(''),
-      price: new FormControl(''),
+      name: new FormControl('', Validators.required),
+      price: new FormControl('', Validators.required),
       details: new FormControl(''),
-      location: new FormControl(''),
-      imageUrl: new FormControl('')
+      location: new FormControl('', Validators.required),
+      imageUrl: new FormControl('', Validators.required)
     })
 
     showPreview(event: any) {
@@ -31,5 +32,13 @@ import { FormGroup, FormControl } from '@angular/forms';
         this.imgSrc = "/assets/images/noimage.jpg";
         this.selectedImage = null;
       }
+    }
+
+    onSubmit(formValue: any) {
+      this.isSubmitted = true;
+    }
+
+    get formControls() {
+      return this.formTemplate['controls'];
     }
   }
